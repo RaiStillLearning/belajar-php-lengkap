@@ -8,14 +8,14 @@
 
 
 
-$nilai1 = 70;
+// $nilai1 = 70;
 
-if ($nilai1 >= 90) {
-    echo "Nilai Kamu Gacor";
-}
-else {
-    echo "Nilai Kamu Tidak Gacor";
-}
+// if ($nilai1 >= 90) {
+//     echo "Nilai Kamu Gacor";
+// };
+// else {
+//     echo "Nilai Kamu Tidak Gacor";
+// }
 
 
 echo "<br>";
@@ -43,4 +43,25 @@ $usia = 16;
 $status = ($usia >= 18) ? "Dewasa" : "Anak-Anak";
 echo "<br>";
 echo $status;
+
+echo "<br>";
+
+$nama_lengkap = $_GET['nama_lengkap'] ?? "Tidak ada nama yang diberikan";
+echo "halo $nama_lengkap";
+
+
+echo "<br>";
+
+$hasil = 90;
+$output = match (true) {
+    $hasil >= 90 => "A",
+    $hasil >= 80 => "B",
+    $hasil >= 70 => "C",
+    $hasil >= 60 => "D",
+    default => "Belum Lulus",
+};
+
+echo 'Hasil: ' . $output;
+
+
 ?>
