@@ -17,4 +17,30 @@ else {
     echo "Nilai Kamu Tidak Gacor";
 }
 
+
+echo "<br>";
+
+$hari = "Rabu";
+switch ($hari) {
+    case "Senin":
+        echo "Hari ini Senin";
+        break;
+    case "Selasa":
+        echo "Hari ini Selasa";
+        break;
+    case "Rabu":
+        echo "Hari ini Rabu";
+        break;
+    default:
+        echo "Hari tidak valid";
+        break;
+}
+
+
+
+$usia = 16;
+
+$status = ($usia >= 18) ? "Dewasa" : "Anak-Anak";
+echo "<br>";
+echo $status;
 ?>
