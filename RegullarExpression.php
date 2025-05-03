@@ -35,4 +35,20 @@ $replace = '****';
 $out = preg_replace($patternReplace, $replace, $phone); // mengganti 4 digit terakhir dengan ****
 echo $out; // output 081234****s
 
+echo '<br/>';
+
+// preg_split memisahkan string berdasarkan pola regex
+$mapel = "PHP  REACT  JAVASCRIPT LARAVEL";
+
+$patternSplit = "/[,\s:|]+/"; // regex untuk memisahkan string berdasarkan koma, spasi, titik dua, dan garis vertikal
+$mapelArray = preg_split($patternSplit, $mapel); // memisahkan string menjadi array
+print_r($mapelArray); // output Array ( [0] => PHP [1] => REACT [2] => JAVASCRIPT [3] => LARAVEL )
+
+echo '<br/>';
+
+// preg_match_all() kita gunakan untuk menemukan semua pola
+$textAll = "Angka: 123,456, dan 789";
+$patternAll = '/\d+/';
+preg_match_all($patternAll, $textAll, $matches); // mencari semua angka dalam string
+print_r($matches[0]); // output Array ( [0] => 123 [1] => 456 [2] => 789 )
 ?>
