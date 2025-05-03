@@ -51,4 +51,6 @@ $textAll = "Angka: 123,456, dan 789";
 $patternAll = '/\d+/';
 preg_match_all($patternAll, $textAll, $matches); // mencari semua angka dalam string
 print_r($matches[0]); // output Array ( [0] => 123 [1] => 456 [2] => 789 )
+
+// \d+ adalah regex untuk mencocokkan satu atau lebih digit angka
 ?>
