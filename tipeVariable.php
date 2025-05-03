@@ -15,7 +15,7 @@ HitungNilai(); // output 80
 
 
 
-echo '<br>';
+echo '<br/>';
 
 // superglobal adalah variable bawaaan dari php yg tersedia di seluruh script atau code. tanpa perlu mendefinisikan global atau menggunakan variable $GLOBALS. superglobal selalu dapat diakses dimanapun terlepas dari ruang lingkupnya 
 
@@ -26,7 +26,14 @@ echo '<br>';
     // 4. $_SESSION - digunakan untuk menyimpan data session
 
     $_GET['nama_lengkap'] = 'Budi'; // contoh penggunaan $_GET
-    echo $_GET['nama_lengkap']; // output Budi
+    echo $_GET['nama_lengkap']."<br/>"; // output Budi
+
+    // mengguanakan variabel globals 
+    $nilaiUAS = 90;
+    function showGlobals() {
+        echo $GLOBALS['nilaiUAS']; // output 90
+    }
 
 
+    showGlobals();
 ?>
