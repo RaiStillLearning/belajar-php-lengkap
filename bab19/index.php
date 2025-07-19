@@ -13,10 +13,13 @@
 <body>
 	<div class="container mx-4">
 		<div class="row">
+			<?php include 'config/koneksi.php'; ?>
 			<?php include 'partials/menu.php'; ?>
-
-			<?php include 'pages/tableData.php'; ?>
-
+			<?php 
+			
+				$page = isset($_GET['page']) ? $_GET['page'] : '';
+			
+			?>
 
 		</div>
 	</div>
