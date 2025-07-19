@@ -1,0 +1,1 @@
+halaman dinamis adalah halaman yang isi kontennya dapat berubah ubah berdasarkan routing / url halaman yang di tuju.

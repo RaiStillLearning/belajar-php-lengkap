@@ -1,0 +1,44 @@
+* {padding:0; margin:0}
+
+/* STYLE UMUM */
+body {font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif}
+.wrapper {width:800px; margin:auto}
+header {color:#FFFFFF; padding:30px 20px; background-color:#2980b9;}
+menu {background-color:#3498db; overflow:hidden}
+menu a {color:#FFFFFF; text-decoration:none; padding:10px 20px; display:inline-block; transition:ease all 0.3s}
+menu a:hover {background-color:#59ABE3}
+menu ul {list-style:none}
+menu ul li {float:left}
+.content h2 {margin-bottom:10px}
+.content {color:#333}
+
+
+footer {color:#FFFFFF; padding:15px 20px; background-color:#2980b9;}
+
+/* HoOME */
+.content {overflow:hidden; padding:20px; background-color:#c5cae9}
+.content-left {width:370px; float:left}
+.content-right {width:370px; float:right}
+
+
+/* ABOUT */
+.about .content p {margin-bottom:20px}
+
+/* PRODUCT */
+.prod-list {width:230px; float:left; margin:0 35px 50px 0px; background-color:#9fa8da;transition:ease all 0.3s}
+.prod-list a {color:#333; text-decoration:none}
+.prod-list img {transition:ease all 0.6s; width:230px}
+.prod-list:hover img {opacity:0.8;}
+.prod-list:hover {background-color:#59ABE3; }
+.product .content h2 {margin-bottom:20px}
+.product .content h3, .product .content p {margin:10px;transition:ease all 0.3s}
+.prod-list:hover h3, .prod-list:hover p {color:#FFFFFF}
+.kanan{float:right; margin-right:0;}
+
+
+/* CONTACT */
+label {padding-top:20px}
+input, textarea {background-color:#fff; border:1px solid #2980b9; width:300px; padding:5px 10px; border-radius:3px; color:#2980b9 }
+textarea {height:100px}
+[type="button"] {background-color:#2980b9; color:#FFFFFF; width:70px; margin-top:15px; float:right; transition:ease all 0.3s}
+[type="button"]:hover {background-color:#59ABE3;}
