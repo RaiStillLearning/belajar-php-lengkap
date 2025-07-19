@@ -9,7 +9,7 @@ if(!in_array($page, $allowedPage)) {
 }
 
 include 'include/header.php';
-include 'pages/$page.php';
+include 'pages/'.$page.'.php';
 include 'include/footer.php';
 
 
