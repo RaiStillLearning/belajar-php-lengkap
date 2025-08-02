@@ -1,11 +1,11 @@
 <?php 
-require"config/koneksi.php";
+require 'config/koneksi.php';
 session_start();
-if($_SERVER["REQUEST_MERHOD"] == 'POST'){
+if($_SERVER["REQUEST_METHOD"] == 'POST'){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    $stmt = $pdo->prepare("SELECT * FROM masterUsers WHERE username = ?");
-    $stmt-execute([$username]);
+    $stmt = $pdo->prepare("SELECT * FROM masterusers WHERE username = ?");
+    $stmt->execute([$username]);
     $user = $stmt->fetch();
 
     if($user && password_verify($password, $user['password'])){
