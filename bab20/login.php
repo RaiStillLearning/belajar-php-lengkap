@@ -1,3 +1,28 @@
+<?php 
+require"config/koneksi.php";
+session_start();
+if($_SERVER["REQUEST_MERHOD"] == 'POST'){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $stmt = $pdo->prepare("SELECT * FROM masterUsers WHERE username = ?");
+    $stmt-execute([$username]);
+    $user = $stmt->fetch();
+
+    if($user && password_verify($password, $user['password'])){
+        $_SESSION['id_user'] = $user['id_user'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['nama_lengkap'] = $user['nama_lengkap'];
+        $_SESSION['role'] = $user['role'];
+        header("Location: index.php");
+        exit();
+} else {
+    header("Location: login.php?status=invalid");
+    exit();
+}
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
