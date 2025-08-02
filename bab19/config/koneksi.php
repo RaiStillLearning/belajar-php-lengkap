@@ -13,8 +13,4 @@ try {
     echo "Koneksi gagal: " . $e->getMessage();
 }
 
-
-
-
-
 ?>

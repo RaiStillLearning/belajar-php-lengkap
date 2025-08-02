@@ -17,8 +17,21 @@
 			<?php include 'partials/menu.php'; ?>
 			<?php 
 			
-				$page = isset($_GET['page']) ? $_GET['page'] : '';
+				$pages = isset($_GET['pages']) ? $_GET['pages'] : '';
 			
+				if($pages == "") {
+					include 'pages/tableData.php';
+				} elseif($pages == "tambah-data") {
+					include 'pages/tambahData.php';
+				} elseif($pages == "ubah-data"){
+					include 'pages/ubahData.php';
+				} elseif($pages == "delete-data") {
+					include 'pages/deleteData.php';
+				} elseif($pages == "lihat-data") {
+					include 'pages/lihatData.php';
+				} else {
+					echo "<h2 class='text-center'>Halaman tidak ditemukan!</h2>";
+				}
 			?>
 
 		</div>
